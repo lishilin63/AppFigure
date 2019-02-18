@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "AppFigure_project", "AppFigure_project\AppFigure_project.dtproj", "{DCD3024A-63DF-4105-9180-640E0FA13CDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCD3024A-63DF-4105-9180-640E0FA13CDE}.Development|Default.ActiveCfg = Development
+		{DCD3024A-63DF-4105-9180-640E0FA13CDE}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

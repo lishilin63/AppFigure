@@ -1,0 +1,2459 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/15/2019 4:36:34 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="DESKTOP-PMMLJND"
+  DTS:CreatorName="DESKTOP-PMMLJND\shilinli"
+  DTS:DTSID="{DB57A713-C65D-443D-8FAA-CD5D71A0F72F}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.5583.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{60610737-7BB3-45B2-BADB-46ABA4B37C5A}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-PMMLJND\SQLEXPRESS.AppFigure_Warehouse]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{7C8CAB46-E635-42E2-8ACB-CA483FBC9E01}"
+      DTS:ObjectName="DESKTOP-PMMLJND\SQLEXPRESS.AppFigure_Warehouse">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-PMMLJND\SQLEXPRESS;Initial Catalog=AppFigure_Warehouse;Integrated Security=True;Application Name=SSIS-Package-{7C8CAB46-E635-42E2-8ACB-CA483FBC9E01}DESKTOP-PMMLJND\SQLEXPRESS.AppFigure_Warehouse;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{2748345A-5CDB-4CEE-B87F-FD569FF2F473}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\AppFigure\data\ranks.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{9A30ECEC-138E-4965-B3AF-C5933483C272}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="app_id"
+              DTS:DTSID="{0C840EB4-024E-414C-BE47-73EA797C66CA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="r0"
+              DTS:DTSID="{786E5EFF-7344-4E95-9ED8-F8BF3222290C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="r1"
+              DTS:DTSID="{61A3E318-5C1F-4652-8ECA-BF23C06C66C0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="r2"
+              DTS:DTSID="{15968C22-458C-4B00-8018-17F5C01CAB6D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="r3"
+              DTS:DTSID="{82EE4BBC-3219-4ED0-8A75-7D16C13FFD7E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="r4"
+              DTS:DTSID="{40BD69A4-95D8-4170-AE7D-9122A61861CD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="r5"
+              DTS:DTSID="{08DBB79F-A972-4E88-9FEC-D445150742AA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="r6"
+              DTS:DTSID="{E3AB5713-0E4B-4900-A71D-3D0E91CE084D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="r7"
+              DTS:DTSID="{47546329-7D3C-42B8-BC3F-70149CC76332}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="r8"
+              DTS:DTSID="{3C48388A-AD60-44C7-B0DF-BD160CEBBA5C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="r9"
+              DTS:DTSID="{F9323091-109E-43A3-9520-A0D9C202FEF0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="r10"
+              DTS:DTSID="{734E3683-4346-4624-997F-62FBF35BA77A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="r11"
+              DTS:DTSID="{EF67DAED-AA89-4E15-A20F-6DFC1F5316F2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="r12"
+              DTS:DTSID="{398F7B19-DF52-48DC-B433-E4179963D1B0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="r13"
+              DTS:DTSID="{FE9522E3-F47B-4CCE-830C-F3716FA6E0C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="r14"
+              DTS:DTSID="{0C98AF2E-8161-43B8-B9DB-5F326BE8B0AC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="r15"
+              DTS:DTSID="{8F07153E-F389-4ECC-AE28-E596E3EC89F5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="r16"
+              DTS:DTSID="{A657126A-AEA7-49DE-883F-DA7D3CDCC9B7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="r17"
+              DTS:DTSID="{B6BA6ACC-A76A-4AED-8821-3A2CD602084D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="r18"
+              DTS:DTSID="{09BDA63E-DA62-4860-B4AB-F0B40FF764F4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="r19"
+              DTS:DTSID="{52FDA7E7-D29A-4964-8E1D-C1E393BB4AC1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="r20"
+              DTS:DTSID="{888FCBC6-E841-442B-99B3-D5D40A64AD1C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="r21"
+              DTS:DTSID="{8AE8CC44-0F70-40D9-8F23-2CD8CEB1CC63}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="r22"
+              DTS:DTSID="{03E1D043-0BB8-4277-9E6B-CA8A24DB09B4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="r23"
+              DTS:DTSID="{3EE35C48-6210-43BB-B129-D93389321085}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="s1"
+              DTS:DTSID="{24F1854C-4A61-4AE8-9044-7995DFF28DD4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="s2"
+              DTS:DTSID="{5911104C-9F58-4C2D-A177-F2859300368F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="s3"
+              DTS:DTSID="{BACD1C09-95F5-47E1-97CC-7049494479F4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="s4"
+              DTS:DTSID="{9D8080F5-D8E4-4E53-B470-2C83A8E84F45}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="s5"
+              DTS:DTSID="{E8E5D2C1-C8F0-48BC-AC24-4946C28D9B9C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cs1"
+              DTS:DTSID="{099C632B-D63C-4AFA-8594-E860C35505A3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cs2"
+              DTS:DTSID="{2F7D6925-4B49-4D8A-A53D-1341F8EA3092}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cs3"
+              DTS:DTSID="{FD093D23-D331-4920-9D72-F7614BD03619}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cs4"
+              DTS:DTSID="{3B617E18-1E8E-460B-AE57-0D8EFB79EBAA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cs5"
+              DTS:DTSID="{C1953552-6478-4333-A89B-F5C15EAA1197}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{05DDC9E8-EA69-4EF7-8F26-98853A598B69}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\AppFigure\data\sales.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{6EDB394E-3B75-4295-9D6D-26086C62539B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="app_id"
+              DTS:DTSID="{35A09F2A-9CBF-463D-978D-48A54E766CD4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sales"
+              DTS:DTSID="{B22BC450-0B80-4FF7-9AD7-9498B11E9D54}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\read CSV file"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{30BFD8CB-3BFC-47E2-A8A4-34356F242929}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="read CSV file"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\read CSV file\rank destination"
+              componentClassID="{874F7595-FB5F-40FF-96AF-FBFF8250E3EF}"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="rank destination"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version= 11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">"dbo"."rank destination"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.SqlServer.Dts.Pipeline.ADONETDestination, Microsoft.SqlServer.ADONETDest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\read CSV file\rank destination.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-PMMLJND\SQLEXPRESS.AppFigure_Warehouse]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-PMMLJND\SQLEXPRESS.AppFigure_Warehouse]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[Date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[app_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="app_id"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[app_id]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[app_id]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[r0]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="r0"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r0]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r0]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[r1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="r1"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r1]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r1]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[r2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="r2"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r2]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r2]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[r3]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="r3"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r3]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r3]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[r4]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="r4"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r4]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r4]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[r5]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="r5"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r5]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r5]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[r6]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="r6"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r6]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r6]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[r7]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="r7"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r7]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r7]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[r8]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="r8"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r8]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r8]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[r9]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="r9"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r9]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r9]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[r10]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="r10"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r10]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r10]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[r11]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="r11"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r11]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r11]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[r12]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="r12"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r12]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r12]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[r13]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="r13"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r13]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r13]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[r14]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="r14"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r14]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r14]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[r15]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="r15"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r15]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r15]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[r16]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="r16"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r16]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r16]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[r17]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="r17"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r17]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r17]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[r18]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="r18"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r18]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r18]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[r19]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="r19"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r19]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r19]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[r20]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="r20"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r20]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r20]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[r21]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="r21"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r21]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r21]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[r22]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="r22"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r22]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r22]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[r23]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="r23"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r23]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r23]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[s1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="s1"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[s1]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[s1]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[s2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="s2"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[s2]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[s2]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[s3]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="s3"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[s3]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[s3]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[s4]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="s4"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[s4]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[s4]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[s5]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="s5"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[s5]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[s5]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[cs1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cs1"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[cs1]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[cs1]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[cs2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cs2"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[cs2]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[cs2]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[cs3]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cs3"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[cs3]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[cs3]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[cs4]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cs4"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[cs4]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[cs4]" />
+                    <inputColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].Columns[cs5]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cs5"
+                      externalMetadataColumnId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[cs5]"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[cs5]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[Date]"
+                      dataType="wstr"
+                      length="50"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[app_id]"
+                      dataType="wstr"
+                      length="50"
+                      name="app_id" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r0]"
+                      dataType="wstr"
+                      length="50"
+                      name="r0" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r1]"
+                      dataType="wstr"
+                      length="50"
+                      name="r1" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r2]"
+                      dataType="wstr"
+                      length="50"
+                      name="r2" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r3]"
+                      dataType="wstr"
+                      length="50"
+                      name="r3" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r4]"
+                      dataType="wstr"
+                      length="50"
+                      name="r4" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r5]"
+                      dataType="wstr"
+                      length="50"
+                      name="r5" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r6]"
+                      dataType="wstr"
+                      length="50"
+                      name="r6" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r7]"
+                      dataType="wstr"
+                      length="50"
+                      name="r7" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r8]"
+                      dataType="wstr"
+                      length="50"
+                      name="r8" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r9]"
+                      dataType="wstr"
+                      length="50"
+                      name="r9" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r10]"
+                      dataType="wstr"
+                      length="50"
+                      name="r10" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r11]"
+                      dataType="wstr"
+                      length="50"
+                      name="r11" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r12]"
+                      dataType="wstr"
+                      length="50"
+                      name="r12" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r13]"
+                      dataType="wstr"
+                      length="50"
+                      name="r13" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r14]"
+                      dataType="wstr"
+                      length="50"
+                      name="r14" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r15]"
+                      dataType="wstr"
+                      length="50"
+                      name="r15" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r16]"
+                      dataType="wstr"
+                      length="50"
+                      name="r16" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r17]"
+                      dataType="wstr"
+                      length="50"
+                      name="r17" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r18]"
+                      dataType="wstr"
+                      length="50"
+                      name="r18" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r19]"
+                      dataType="wstr"
+                      length="50"
+                      name="r19" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r20]"
+                      dataType="wstr"
+                      length="50"
+                      name="r20" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r21]"
+                      dataType="wstr"
+                      length="50"
+                      name="r21" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r22]"
+                      dataType="wstr"
+                      length="50"
+                      name="r22" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[r23]"
+                      dataType="wstr"
+                      length="50"
+                      name="r23" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[s1]"
+                      dataType="wstr"
+                      length="50"
+                      name="s1" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[s2]"
+                      dataType="wstr"
+                      length="50"
+                      name="s2" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[s3]"
+                      dataType="wstr"
+                      length="50"
+                      name="s3" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[s4]"
+                      dataType="wstr"
+                      length="50"
+                      name="s4" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[s5]"
+                      dataType="wstr"
+                      length="50"
+                      name="s5" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[cs1]"
+                      dataType="wstr"
+                      length="50"
+                      name="cs1" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[cs2]"
+                      dataType="wstr"
+                      length="50"
+                      name="cs2" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[cs3]"
+                      dataType="wstr"
+                      length="50"
+                      name="cs3" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[cs4]"
+                      dataType="wstr"
+                      length="50"
+                      name="cs4" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input].ExternalColumns[cs5]"
+                      dataType="wstr"
+                      length="50"
+                      name="cs5" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\read CSV file\rank destination.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\read CSV file\rank destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\read CSV file\rank destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\read CSV file\rank destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\read CSV file\rank destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\read CSV file\read rank"
+              componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="read rank"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\read CSV file\read rank.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\read CSV file\read rank.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[Date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[app_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[app_id]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[app_id]"
+                      name="app_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r0]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r0]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r0]"
+                      name="r0"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r1]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r1]"
+                      name="r1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r2]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r2]"
+                      name="r2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r3]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r3]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r3]"
+                      name="r3"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r4]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r4]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r4]"
+                      name="r4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r5]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r5]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r5]"
+                      name="r5"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r6]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r6]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r6]"
+                      name="r6"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r7]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r7]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r7]"
+                      name="r7"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r8]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r8]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r8]"
+                      name="r8"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r9]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r9]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r9]"
+                      name="r9"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r10]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r10]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r10]"
+                      name="r10"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r11]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r11]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r11]"
+                      name="r11"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r12]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r12]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r12]"
+                      name="r12"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r13]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r13]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r13]"
+                      name="r13"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r14]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r14]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r14]"
+                      name="r14"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r15]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r15]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r15]"
+                      name="r15"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r16]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r16]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r16]"
+                      name="r16"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r17]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r17]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r17]"
+                      name="r17"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r18]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r18]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r18]"
+                      name="r18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r19]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r19]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r19]"
+                      name="r19"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r20]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r20]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r20]"
+                      name="r20"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r21]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r21]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r21]"
+                      name="r21"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r22]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r22]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r22]"
+                      name="r22"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r23]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r23]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[r23]"
+                      name="r23"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[s1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[s1]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[s1]"
+                      name="s1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[s2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[s2]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[s2]"
+                      name="s2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[s3]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[s3]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[s3]"
+                      name="s3"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[s4]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[s4]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[s4]"
+                      name="s4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[s5]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[s5]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[s5]"
+                      name="s5"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[cs1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[cs1]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[cs1]"
+                      name="cs1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[cs2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[cs2]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[cs2]"
+                      name="cs2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[cs3]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[cs3]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[cs3]"
+                      name="cs3"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[cs4]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[cs4]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[cs4]"
+                      name="cs4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[cs5]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[cs5]"
+                      length="50"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Output].Columns[cs5]"
+                      name="cs5"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[app_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="app_id" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r0]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="r0" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="r1" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="r2" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r3]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="r3" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r4]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="r4" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r5]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="r5" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r6]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="r6" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r7]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="r7" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r8]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="r8" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r9]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="r9" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r10]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="r10" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r11]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="r11" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r12]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="r12" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r13]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="r13" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r14]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="r14" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r15]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="r15" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r16]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="r16" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r17]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="r17" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r18]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="r18" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r19]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="r19" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r20]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="r20" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r21]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="r21" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r22]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="r22" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[r23]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="r23" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[s1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="s1" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[s2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="s2" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[s3]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="s3" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[s4]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="s4" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[s5]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="s5" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[cs1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cs1" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[cs2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cs2" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[cs3]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cs3" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[cs4]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cs4" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Output].ExternalColumns[cs5]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cs5" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\read CSV file\read rank.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\read CSV file\read rank.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\read CSV file\read rank.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\read CSV file\read sales"
+              componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="read sales"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\read CSV file\read sales.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\read CSV file\read sales.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\read CSV file\read sales.Outputs[Flat File Source Output].Columns[Date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read sales.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      length="50"
+                      lineageId="Package\read CSV file\read sales.Outputs[Flat File Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read sales.Outputs[Flat File Source Output].Columns[app_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read sales.Outputs[Flat File Source Output].ExternalColumns[app_id]"
+                      length="50"
+                      lineageId="Package\read CSV file\read sales.Outputs[Flat File Source Output].Columns[app_id]"
+                      name="app_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\read CSV file\read sales.Outputs[Flat File Source Output].Columns[sales]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\read CSV file\read sales.Outputs[Flat File Source Output].ExternalColumns[sales]"
+                      length="50"
+                      lineageId="Package\read CSV file\read sales.Outputs[Flat File Source Output].Columns[sales]"
+                      name="sales"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read sales.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read sales.Outputs[Flat File Source Output].ExternalColumns[app_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="app_id" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\read sales.Outputs[Flat File Source Output].ExternalColumns[sales]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="sales" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\read CSV file\read sales.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\read CSV file\read sales.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\read CSV file\read sales.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\read CSV file\read sales.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\read CSV file\read sales.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\read CSV file\read sales.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\read CSV file\read sales.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\read CSV file\sales destination"
+              componentClassID="{874F7595-FB5F-40FF-96AF-FBFF8250E3EF}"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="sales destination"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version= 11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">"sales destination"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.SqlServer.Dts.Pipeline.ADONETDestination, Microsoft.SqlServer.ADONETDest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\read CSV file\sales destination.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-PMMLJND\SQLEXPRESS.AppFigure_Warehouse]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-PMMLJND\SQLEXPRESS.AppFigure_Warehouse]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\read CSV file\sales destination.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\read CSV file\sales destination.Inputs[ADO NET Destination Input].Columns[Date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\read CSV file\sales destination.Inputs[ADO NET Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\read CSV file\read sales.Outputs[Flat File Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\read CSV file\sales destination.Inputs[ADO NET Destination Input].Columns[app_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="app_id"
+                      externalMetadataColumnId="Package\read CSV file\sales destination.Inputs[ADO NET Destination Input].ExternalColumns[app_id]"
+                      lineageId="Package\read CSV file\read sales.Outputs[Flat File Source Output].Columns[app_id]" />
+                    <inputColumn
+                      refId="Package\read CSV file\sales destination.Inputs[ADO NET Destination Input].Columns[sales]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="sales"
+                      externalMetadataColumnId="Package\read CSV file\sales destination.Inputs[ADO NET Destination Input].ExternalColumns[sales]"
+                      lineageId="Package\read CSV file\read sales.Outputs[Flat File Source Output].Columns[sales]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\sales destination.Inputs[ADO NET Destination Input].ExternalColumns[Date]"
+                      dataType="wstr"
+                      length="50"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\sales destination.Inputs[ADO NET Destination Input].ExternalColumns[app_id]"
+                      dataType="wstr"
+                      length="50"
+                      name="app_id" />
+                    <externalMetadataColumn
+                      refId="Package\read CSV file\sales destination.Inputs[ADO NET Destination Input].ExternalColumns[sales]"
+                      dataType="wstr"
+                      length="50"
+                      name="sales" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\read CSV file\sales destination.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\read CSV file\sales destination.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\read CSV file\sales destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\read CSV file\sales destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\read CSV file\sales destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\read CSV file\sales destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\read CSV file.Paths[Flat File Source Output]"
+              endId="Package\read CSV file\rank destination.Inputs[ADO NET Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\read CSV file\read rank.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\read CSV file.Paths[Flat File Source Output1]"
+              endId="Package\read CSV file\sales destination.Inputs[ADO NET Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\read CSV file\read sales.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="139.2,41.6"
+          Id="Package\read CSV file"
+          TopLeft="122.285716368227,48.9411771569698" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\read CSV file">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="123.2,41.6"
+          Id="Package\read CSV file\read rank"
+          TopLeft="170.285717185663,45.270588870197" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\read CSV file\rank destination"
+          TopLeft="160.571431305944,165.788237619235" />
+        <EdgeLayout
+          Id="Package\read CSV file.Paths[Flat File Source Output]"
+          TopLeft="235.028574245803,86.870588870197">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,78.917648749038"
+              Start="0,0"
+              End="0,71.417648749038">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,71.417648749038" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="126.4,41.6"
+          Id="Package\read CSV file\read sales"
+          TopLeft="404.571435461239,45.270588870197" />
+        <NodeLayout
+          Size="156.8,41.6"
+          Id="Package\read CSV file\sales destination"
+          TopLeft="421.142864314877,171.905884763856" />
+        <EdgeLayout
+          Id="Package\read CSV file.Paths[Flat File Source Output1]"
+          TopLeft="467.771435461239,86.870588870197">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="31.7714288536382,85.0352958936593"
+              Start="0,0"
+              End="31.7714288536382,77.5352958936593">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5176479468296" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38.5176479468296"
+                    Point2="0,42.5176479468296"
+                    Point3="4,42.5176479468296" />
+                  <mssgle:LineSegment
+                    End="27.7714288536382,42.5176479468296" />
+                  <mssgle:CubicBezierSegment
+                    Point1="27.7714288536382,42.5176479468296"
+                    Point2="31.7714288536382,42.5176479468296"
+                    Point3="31.7714288536382,46.5176479468296" />
+                  <mssgle:LineSegment
+                    End="31.7714288536382,77.5352958936593" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\read CSV file\rank destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\read CSV file\sales destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

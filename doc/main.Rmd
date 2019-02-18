@@ -1,0 +1,91 @@
+---
+title: "AppFigure Report"
+author: "George Li"
+date: "2/16/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+###PART I
+
+The SSIS data flow packaged is created for loading csv to SQL Server. Data types are strings which further modification could be added.
+
+##### Step 0: specify directories.
+```{r wkdir, eval=FALSE}
+set.seed(2018)
+setwd("~/Documents/GitHub/AppFigures") 
+# use relative path for reproducibility
+```
+
+```{r include=FALSE}
+source("../lib/EDA.R")
+source("../lib/model.R")
+```
+
+###### Step 1: EDA
+
+Initially mapping with sales_tbl id with ranks_tbl id. A summry of 599 observations labeled data without NA, and 96503 observations to be predicted with NA. A scatter plot shows the inverse relationship between app ranking and sales. A histogram shows the distribution of app_id with sales label shows great variance and unbalanced app frequencies while collecting from source. 
+```{r}
+plot(x = dt_label$r0, y = dt_label$sales, xlab = "App Rank", ylab = "Sales", main = "Sales vs Rank")
+hist(dt_label$app_id, breaks = id_length, xlab = "App Id", ylab = "Frequency", main = "Distribution of App Id")
+```
+
+Working w/ labeled data, distribution of sales is highly skewed with a possibly poisson shape distribution. Sales vs reviews follows expectation that higher reviews receives higher number of downloads. The dt_label contains "Date", "app_id", "r0", "s_mean" and "sales". s_mean is the mean aggregate value from daily reviews. Since r0 - r23 does not vary much each day, then use r0 (the end of the day) is representative for day's rank.
+```{r}
+hist(dt_label$sales, xlab = "Sales Number", main = "Historgram of Sales")
+plot(x = dt_label$s_mean, y = dt_label$sales, xlab = "5 Star Review", ylab = "Sales", main = "Sales vs Reviews")
+```
+
+Aggregate app_id level shows 39 observation with 13 missing values. Therefore, it is not enough sample size to run model. However, useful information concludes statistical significant correlation between ranks and sales, s (star reviews) and sales, ranks and s (star reviews) with Pearson correlation test. 
+```{r}
+summary(dt_app)
+cor.test(dt_app$r_avg, dt_app$sales, method=c("pearson", "kendall", "spearman"))
+cor.test(dt_app$s_avg, dt_app$sales, method=c("pearson", "kendall", "spearman"))
+cor.test(dt_app$r_avg, dt_app$s_avg, method=c("pearson", "kendall", "spearman"))
+```
+
+Outliers are easily detected with large deviation from the mean by using cooks distance. Outliers could be normal phenomenon with some popular apps so further dealing with these points should discuss with manager (here the data is kept).
+```{r}
+boxplot(dt_label$sales, main = "Boxplot of Sales")
+plot(cooksd, main = "Outlier with Cook's Dist")
+abline(h = 4*mean(cooksd, na.rm=T), col="red")  # add cutoff line
+text(x=1:length(cooksd)+1, y=cooksd, labels=ifelse(cooksd>4*mean(cooksd, na.rm=T),names(cooksd),""), col="red")  # add labels
+```
+
+Note: PCA is not used for this dataset. r0 - r23 does not provide additional information which is representitve by r0. s1 - s5 could be summerized by the arithmetic mean. Thus, only two variables makes contribution to sales number.
+
+
+##### Step 2: Model w/ prediction
+
+Inverse log transformation is applied on the initial skewed sales distribution. The transformed distribution is closer to Gaussian, which is used in predicting sales. An interaction term is used r0 & s_mean (previous cor test proves). Coefficients are statistically significant and prediction result is saved as a new csv file.
+```{r}
+plot(1/log(dt_label$sales), ylab = "1 / log(Sales)", main = "Inverse log transformation of Sales")
+summary(model_linear)
+```
+
+###Part II
+
+Originally the model is intended to use time series model. In a general perspective, we could inspect that today's sales could be largely correlated with yesterday's download number. Indeed for dt_label, there is lag relationship between time and sales. However, in app-specific level, the seasonality vary greatly within different apps and ARMA model would yield differet coefficients. Therefore, a ARMA / GARCH model would be encouraged but a longer time longevity is definitely needed.
+```{r}
+plot(x = dt_label$Date, y = dt_label$sales, xlab = "Date", ylab = "Sales", main = "Sales vs Date")
+acf(dt_label$sales, main = "acf of all-app sales")
+acf(dt_label[dt_label$app_id==1490,]$sales, main = "acf chart of App 1490 sales")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
